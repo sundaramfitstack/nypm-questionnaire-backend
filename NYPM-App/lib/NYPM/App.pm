@@ -34,6 +34,9 @@ post '/notify' => sub {
 
   	my $content = "Hello Ali,\n\n";
 
+    $content .= "Name: " . $payload->{'name'} . "\n".
+    "Email : " . $payload->{'email'} . "\n".
+    "Phone : " . $payload->{'phone'} . "\n";
     
     if ($service_type eq 'home service'){
       	
